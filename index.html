@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Quiz</title>
+
+</head>
+<body>
+    <header>
+        <h1>Timed Quiz</h1>
+    </header>
+    <main>
+
+<!--My first action in HTML was to create different containers for each of my questions, although I learned there is also a way to include them all in one container which may be more practical (may switch)-->
+<section id="quiz-container">
+    <!--My third action in HTML was to create a begin button, as well as an area for the timer-->
+    <timer id="timer">Time remaining: 30 seconds</timer>
+    <button id="beginButton">Begin Timed Quiz</button>  
+    <!--My fourth action in HTML was to create a button for the High Score-->
+    <section id="highScore">High Score: 0</section>
+  
+</section>
+<!--My second action in HTML was to make my answers function as buttons, which I found that the radio feature would serve well for the purpose of this project-->
+<div class="question-container" style="display: none;">
+        <p id="question1">What is JavaScript?</p>
+        <ul id="choices1">
+            <li><input type="radio" name="q1" value="wrong"> A function</li>
+            <li><input type="radio" name="q1" value="correct">A programming language</li>
+            <li><input type="radio" name="q1" value="wrong">A variable</li>
+            <li><input type="radio" name="q1" value="wrong">A markup language</li>
+        </ul>
+        <button class="proceed-button">Proceed to Next Question</button>
+        <!--Changed the proceed button to be freatured after each question, since having it at the end of the "parent container" for all questions wasn't working-->
+</div>
+
+<div class="question-container" style="display: none;">
+        <p id="question2">Which one of these options would show as a comment in JavaScript?</p>
+        <ul id="choices2">
+            <li><input type="radio" name="q2" value="correct"> // This is my comment!</li>
+            <li><input type="radio" name="q2" value="wrong">** This is my comment! **</li>
+            <li><input type="radio" name="q2" value="wrong">"This is my comment!"</li>
+            <li><input type="radio" name="q2" value="wrong">None of these.</li>
+        </ul>
+        <button class="proceed-button">Proceed to Next Question</button>
+</div>
+
+<div class="question-container" style="display: none;">
+        <p id="question3">What is the purpose of `console.log()` in JavaScript?</p>
+        <ul id="choices3">
+            <li><input type="radio" name="q3" value="wrong">Opens the console</li>
+            <li><input type="radio" name="q3" value="wrong">Creates an alert</li>
+            <li><input type="radio" name="q3" value="wrong">Links HTML to JavaScript</li>
+            <li><input type="radio" name="q3" value="correct">Prints text to console</li>
+        </ul>
+        <button class="proceed-button">Proceed to Next Question</button>
+</div>
+        <div class="question-container" style="display: none;">
+            <p id="question4">What does an `if` statement do in JavaScript?</p>
+            <ul id="choices4">
+                <li><input type="radio" name="q4" value="wrong">Creates a variable</li>
+                <li><input type="radio" name="q4" value="wrong">Creates a loop</li>
+                <li><input type="radio" name="q4" value="wrong">Creates a function</li>
+                <li><input type="radio" name="q4" value="correct">Executes a block of code conditionally</li>
+            </ul>
+            <button class="proceed-button">Proceed to Next Question</button>
+        </div>
+            <div class="question-container" style="display: none;">
+                <p id="question5">Which of these options stores a single character in JavaScript?</p>
+                <ul id="choices5">
+                    <li><input type="radio" name="q5" value="wrong">`boolean`</li>
+                    <li><input type="radio" name="q5" value="wrong">`integer`</li>
+                    <li><input type="radio" name="q5" value="correct">`string`</li>
+                    <li><input type="radio" name="q5" value="wrong">`char`</li>
+                </ul>
+        <button class="proceed-button">Proceed to Next Question</button>
+</div>
+
+
+</main>
+<!--Linked my JavaScript towards the bottom of the file because I learned that's one of the common places to put it, along with the head. Not sure when it would be more practical to use one or the other -->
+    <script src="timedQuiz.js"></script>
+</body>
+</html>
